@@ -1,3 +1,5 @@
+from math import hypot
+
 class vec2:
     def __init__(self, x=0, y=0):
         self.x = x
@@ -28,3 +30,6 @@ class vec2:
 
     def __neq__(self, other):
         return not self == other
+
+    def __abs__(self):
+        return hypot(self.x, self.y)
